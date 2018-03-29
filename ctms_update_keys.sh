@@ -29,4 +29,4 @@ chmod 600 $ROOT_AUTH_FILE
 cp ctms_update_keys.sh /etc/cron.daily/
 chown root:root /etc/cron.daily/ctms_update_keys.sh
 chmod a+x /etc/cron.daily/ctms_update_keys.sh
-/etc/cron.daily/ctms_update_keys.sh
+
