@@ -3,6 +3,10 @@
 DATE=$(date +%Y%m%d)
 ROOT_AUTH_FILE="/root/.ssh/authorized_keys"
 
+
+apt-get update
+apt-get -y install git
+
 pushd /root
 mkdir -p CTMS
 pushd CTMS
@@ -21,3 +25,8 @@ patch $ROOT_AUTH_FILE authorized_keys_$DATE.patch
 chown root.root $ROOT_AUTH_FILE
 chmod 600 $ROOT_AUTH_FILE
  
+
+cp ctms_update_keys.sh /etc/cron.daily/
+chown root:root /etc/cron.daily/ctms_update_keys.sh
+chmod a+x /etc/cron.daily/ctms_update_keys.sh
+/etc/cron.daily/ctms_update_keys.sh
