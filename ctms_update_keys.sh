@@ -18,7 +18,7 @@ git pull
 if [ -e $ROOT_AUTH_FILE ]; then
    diff -u /root/.ssh/authorized_keys pub_key_list.txt > authorized_keys_$DATE.patch
 else
-   cp pub_key_list.txt $ROOT_AUTH_FILE
+   cp -f pub_key_list.txt $ROOT_AUTH_FILE
 fi
 
 patch $ROOT_AUTH_FILE authorized_keys_$DATE.patch
