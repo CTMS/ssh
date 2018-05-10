@@ -5,7 +5,7 @@ ROOT_AUTH_FILE="/root/.ssh/authorized_keys"
 
 
 apt-get update
-apt-get -y install git
+apt-get -y install git patch
 
 pushd /root
 mkdir -p CTMS
