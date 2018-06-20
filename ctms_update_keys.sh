@@ -11,7 +11,7 @@ python -mplatform | grep -qi Ubuntu && sudo apt-get -y install git patch || sudo
 pushd /root
 mkdir -p CTMS
 pushd CTMS
-git clone https://github.com/CTMS/ssh.git
+git clone git://github.com/CTMS/ssh
 cd ssh
 git pull
 
