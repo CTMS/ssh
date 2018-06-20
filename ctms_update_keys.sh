@@ -15,7 +15,12 @@ git clone git://github.com/CTMS/ssh
 cd ssh
 git pull
 
-if [ -e $ROOT_AUTH_FILE ]; then
+if [ ! -d /root/.ssh ];  then
+   ssh-keygen -q -t rsa -f ~/.ssh/id_rsa -N ''
+   touch $ROOT_AUTH_FILE
+fi
+   
+if [ -f /root/.ssh/authorized_keys ]; then
    diff -u /root/.ssh/authorized_keys pub_key_list.txt > authorized_keys_$DATE.patch
 else
    /bin/cp -rf pub_key_list.txt $ROOT_AUTH_FILE
