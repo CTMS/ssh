@@ -5,7 +5,7 @@ ROOT_AUTH_FILE="/root/.ssh/authorized_keys"
 
 
 apt-get update
-python -mplatform | grep -qi Ubuntu && sudo apt-get update || sudo yum update
+## python -mplatform | grep -qi Ubuntu && sudo apt-get update || sudo yum update
 python -mplatform | grep -qi Ubuntu && sudo apt-get -y install git patch || sudo yum -y install git patch
 
 pushd /root
