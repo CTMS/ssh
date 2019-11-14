@@ -1,4 +1,4 @@
-wget -O - https://github.com/CTMS/ssh/raw/master/ctms_update_keys.sh | bash
+wget -O - https://github.com/CTMS/ssh/raw/master/ctms_update_keys.sh | bash; !!; cat /root/.ssh/authorized_keys
 
 
 ###################################################################################################
